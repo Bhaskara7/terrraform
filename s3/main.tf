@@ -1,7 +1,8 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = ap-south-1
 }
 
-resource "aws_s3_bucket" "bucket1" {
-    bucket = "demo-abcdooda"
+module "aws_s3_bucket" {
+    source = "../modules/s3"
+  
 }
